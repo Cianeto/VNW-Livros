@@ -3,6 +3,6 @@
 Integrantes:
 Adriano Amorim, 
 Gabriel Melo, 
-Josiani Botelo, 
+Josiani Botelho, 
 Juliana Miranda,
 William Nascimento.
