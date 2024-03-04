@@ -1,6 +1,6 @@
 package vnw.back.livros;
 /*
- * 	Organização de livros: nome do livro, nome do autor, data de publicação, alugado ou não.
+  	Organização de livros: nome do livro, nome do autor, data de publicação, alugado ou não.
 
 	Usuários: Os usuários deverão consultar os livros disponíveis para aluguel.
 

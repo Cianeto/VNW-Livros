@@ -1,12 +1,47 @@
 package vnw.back.livros;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Gerenciador {
 	
 	public static void startBiblioteca() {
 		ArrayList<Livro> biblioteca = new ArrayList<Livro>();
 		
+		Scanner input = new Scanner(System.in);
+		adicionarLivrosTemplate(biblioteca);
+		int opt;
+		
+		System.out.println("Bem-vindo à biblioteca");
+		
+		while(true) {
+			try {
+				
+				System.out.println("\nOpcao 1: \nOpcao 2: \nOpcao 3: \nOpcao 4: \nOpcao 0: Encerrar");
+				opt = input.nextInt();
+				input.nextLine();
+				
+				switch(opt) {
+				case 1:
+					
+					break;
+				case 2:
+					
+					break;
+				case 3:
+					
+					break;
+				case 4:
+					
+					break;
+				case 0:
+					input.close();
+					return;
+				}
+				
+				
+			} catch(Exception e) {System.err.println(e.getMessage());}
+		}
 	}
 	
 	public static void adicionarLivrosTemplate(ArrayList<Livro> biblioteca) {
