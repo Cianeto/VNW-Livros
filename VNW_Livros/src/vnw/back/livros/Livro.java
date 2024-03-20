@@ -24,6 +24,7 @@ public class Livro {
 		this.dataDePublic = dataDePublic;
 		this.alugado = alugado;
 	}
+
 	
 	public Livro() {}
 }

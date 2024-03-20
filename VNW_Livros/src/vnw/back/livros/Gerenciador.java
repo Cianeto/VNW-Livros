@@ -8,6 +8,8 @@ public class Gerenciador {
 	public static void startBiblioteca() {
 		ArrayList<Livro> biblioteca = new ArrayList<Livro>();
 		
+		GerenciadorUsuario gerenciadorUsuario = new GerenciadorUsuario();
+		
 		Scanner input = new Scanner(System.in);
 		adicionarLivrosTemplate(biblioteca);
 		int opt;
@@ -17,17 +19,31 @@ public class Gerenciador {
 		while(true) {
 			try {
 				
-				System.out.println("\nOpcao 1: \nOpcao 2: \nOpcao 3: \nOpcao 4: \nOpcao 0: Encerrar");
+				System.out.println("\nOpcao 1: Cadastrar Usuário \nOpcao 2: Pesquisar por usuário \nOpcao 3: \nOpcao 4: \nOpcao 0: Encerrar");
 				opt = input.nextInt();
 				input.nextLine();
 				
 				switch(opt) {
 				case 1:
-					
-					break;
-				case 2:
-					
-					break;
+                    System.out.println("Insira seu CPF: ");
+                    String cpf = input.nextLine();
+
+                    System.out.println("Insira seu nome completo: ");
+                    String nomeCompleto = input.nextLine();
+
+                    gerenciadorUsuario.cadastrarUsuarios(cpf, nomeCompleto);
+                    break;
+                case 2:
+                    input.nextLine();
+                    System.out.println("Digite o CPF: ");
+                    cpf = input.nextLine();
+
+                    String usuarioCadastrado = gerenciadorUsuario.encontrarUsuario(cpf).isPresent()?
+                            "Usuário Encontrado" :
+                            "Usuário não cadastrado";
+
+                    System.out.println(usuarioCadastrado);
+                    break;
 				case 3:
 					
 					break;
